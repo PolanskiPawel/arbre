@@ -1,0 +1,202 @@
+* {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	  
+	-webkit-transition: all ease .4s;
+	-moz-transition: all ease .4s;
+	  transition: all ease .4s;
+  }
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    height: 100%;
+	width: 100%;
+	min-width: max-content;
+	background: RGBA(0, 58, 97, 1);
+	  
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 18px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+h1, h2, h3 {
+    color: #ccc;
+    text-align: center;
+    text-shadow: rgba(0,0,0,0.6) 1px 0, rgba(0,0,0,0.6) 1px 0, rgba(0,0,0,0.6) 0 1px, rgba(0,0,0,0.6) 0 1px;
+}
+
+h1 { padding-top: 40px; font-size: 1.8rem; }
+h2 { padding-top: 40px; font-size: 1.5rem; }
+h3 { padding-top: 40px; font-size: 1.2rem; }
+
+
+.nav {
+  margin: 20px auto;
+  width: 100%;
+  min-height: auto;
+}
+
+.nav ul {
+  position: relative;
+  padding-top: 20px;
+}
+
+.nav li {
+  position: relative;
+  padding: 20px 3px 0 3px; 
+  float: left; 
+  
+  text-align: center;
+  list-style-type: none; 
+}
+
+.nav li::before, .nav li::after{
+  content: '';
+  position: absolute; 
+  top: 0; 
+  right: 50%;
+  width: 50%; 
+  height: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.nav li::after{
+  left: 50%;
+  right: auto; 
+  
+  border-left: 1px solid #ccc;
+}
+
+.nav li:only-child::after, .nav li:only-child::before {
+  content: '';
+  display: none;
+}
+
+.nav li:only-child{ padding-top: 0;}
+.nav li:first-child::before, .nav li:last-child::after{
+  border: 0 none;
+}
+
+.nav li:last-child::before{
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+}
+
+.nav li:first-child::after{
+    border-radius: 5px 0 0 0;
+}
+.nav ul ul::before{
+  content: '';
+  position: absolute; top: 0; left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0; 
+  height: 20px;
+}
+
+.nav li a{
+  display: inline-block;
+  padding: 5px 10px;
+  
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ccc;
+  font-family: arial, verdana, tahoma;
+  font-size: 11px;
+}
+
+.nav li a:hover, .nav li a:hover+ul li a {
+  color: #000;
+  background: #c8e4f8;   
+  border: 1px solid #94a0b4;
+}
+
+.nav li a:hover+ul li::after, 
+.nav li a:hover+ul li::before,
+.nav li a:hover+ul::before, 
+.nav li a:hover+ul ul::before{
+  content: '';
+  border-color: #94a0b4;
+}
+
+/* color
+
+.classe a {
+	background-color: #FF6347;
+}
+
+*/
+
+/* Cache les sous-listes par défaut */
+.nested {
+  display: none;
+  list-style-type: none; /* Enlève les puces des listes imbriquées */
+  padding-left: 20px; /* Indentation des sous-listes */
+  margin: 0; /* Enlève la marge des sous-listes */
+}
+
+.toggle {
+  cursor: pointer;
+  display: block; /* Assurez-vous que l'élément prend toute la largeur disponible */
+}
+
+/* Affiche les sous-listes lorsqu'un élément est actif */
+.nested.active {
+  display: block;
+}
+
+/* Style des popups */
+.popup {
+  display: none; /* Masquer la popup par défaut */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); /* Couleur de fond avec transparence */
+}
+
+.popup-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.close-btn {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
