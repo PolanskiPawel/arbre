@@ -7,11 +7,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+
+
+
     <header>
         <nav>
         </nav>
     </header>
+
     <main>
+
+
+
+        <button id="language-toggle">Termes Biologiques</button>
+        <ul id="taxonomic-tree"></ul>
+
         <section>
             <h1>Classement Taxonomique</h1>
             <h2>Règne des Animaux</h2>
@@ -19,13 +30,13 @@
             <nav class="nav">
                         <ul>
                             <li class="classe">
-                                <a href="#" class="toggle">Reptilia</a>
+                                <a href="#" class="toggle" data-key="Reptilia">Reptilia</a>
                                 <ul>
                                     <li class="ordre">
-                                        <a href="#" class="toggle">Testudines</a>
+                                        <a href="#" class="toggle" data-key="Testudines">Testudines</a>
                                         <ul class="nested">
                                             <li class="sous-ordre">
-                                                <a href="#" class="toggle">Animalia</a>
+                                                <a href="#" class="toggle">Cryptodira</a>
                                                 </div>
                                                 <ul class="nested">
                                                     <li class="famille">
@@ -252,9 +263,31 @@
                                                             </li>
                                                             <li>
                                                                 <a href="#" class="toggle">Emys</a>
+                                                                <ul class="nested">
+
+                                                                    <li class="espece">
+                                                                        <a href="#" class="toggle">Emys orbicularis</a>
+
+                                                                    </li>
+
+                                                                    <li>
+                                                                        <a href="#" class="toggle">Emys trinacris</a>
+                                                                    </li>
+                                                                </ul>
                                                             </li>
                                                             <li>
                                                                 <a href="#" class="toggle">Glyptemys</a>
+                                                                <ul class="nested">
+
+                                                                    <li class="espece">
+                                                                        <a href="#" class="toggle">Glyptemys insculpta</a>
+
+                                                                    </li>
+
+                                                                    <li>
+                                                                        <a href="#" class="toggle">Glyptemys muhlenbergii</a>
+                                                                    </li>
+                                                                </ul>
                                                             </li>
                                                             <li>
                                                                 <a href="#" class="toggle">Graptemys</a>
@@ -296,25 +329,25 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#" class="toggle">Squamata</a>
+                                        <a href="#" class="toggle" data-key="Squamata">Squamata</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="toggle">Crocodylia</a>
+                                        <a href="#" class="toggle" data-key="Crocodylia">Crocodylia</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="toggle">Rhynchocephalia</a>
+                                        <a href="#" class="toggle" data-key="Rhynchocephalia">Rhynchocephalia</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="toggle">Ichthyosauria</a>
+                                        <a href="#" class="toggle" data-key="Ichthyosauria">Ichthyosauria</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="toggle">Plesiosauria</a>
+                                        <a href="#" class="toggle" data-key="Plesiosauria">Plesiosauria</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="toggle">Theropoda</a>
+                                        <a href="#" class="toggle" data-key="Theropoda">Theropoda</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="toggle">Sauropterygia</a>
+                                        <a href="#" class="toggle" data-key="Sauropterygia">Sauropterygia</a>
                                     </li>
                                 </ul>
                             </li>
